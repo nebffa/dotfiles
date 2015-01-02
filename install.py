@@ -27,3 +27,6 @@ if __name__ == '__main__':
 
 	for dotfile in os_agnostic_dotfiles:
 		shutil.copy(dotfile, home_dir)
+
+	for dotfile in os_specific_dotfiles:
+		shutil.copy(dotfile, home_dir)		
