@@ -23,7 +23,7 @@ if __name__ == '__main__':
 	home_dir = sys.argv[2]
 
 	script_location = os.path.dirname(os.path.realpath(__file__))
-	os_agnostic_dotfiles = get_dotfiles(os.path.join(script_location, '.'))
+	os_agnostic_dotfiles = get_dotfiles(script_location)
 	os_specific_dotfiles = get_dotfiles(os.path.join(script_location, target_os))
 
 	for dotfile in os_agnostic_dotfiles:
