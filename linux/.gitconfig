@@ -1,0 +1,14 @@
+[user]
+	name = Ben Lucato
+	email = ben.lucato@enett.com
+[push]
+	default = simple
+[alias]
+	c = commit
+	p = pull
+	s = status
+	d = diff
+	a = add
+	ll = log --stat --abbrev-commit
+	m = merge
+	cp = cherry-pick
