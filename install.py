@@ -11,7 +11,7 @@ import shutil
 
 
 def get_dotfiles(dirname):
-	return glob.glob('{0}/.[A-Za-z]*'.format(dirname)
+	return glob.glob('{0}/.[A-Za-z]*'.format(dirname))
 
 
 if __name__ == '__main__':
