@@ -12,7 +12,7 @@ import shutil
 
 def get_dotfiles(dirname):
 	ignore = ['.gitignore', '.git']
-	return [filename for filename in glob.glob('{0}/.[A-Za-z]*'.format(dirname) if filename not in ignore)
+	return [filename for filename in glob.glob('{0}/.[A-Za-z]*'.format(dirname) if filename not in ignore)]
 
 
 if __name__ == '__main__':
