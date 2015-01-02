@@ -11,8 +11,7 @@ import shutil
 
 
 def get_dotfiles(dirname):
-	ignore = ['.gitignore', '.git']
-	return [filename for filename in glob.glob('{0}/.[A-Za-z]*'.format(dirname)) if filename not in ignore]
+	return glob.glob('{0}/.[A-Za-z]*'.format(dirname)
 
 
 if __name__ == '__main__':
@@ -25,9 +24,6 @@ if __name__ == '__main__':
 	script_location = os.path.dirname(os.path.realpath(__file__))
 	os_agnostic_dotfiles = get_dotfiles(script_location)
 	os_specific_dotfiles = get_dotfiles(os.path.join(script_location, target_os))
-
-	for dotfile in os_agnostic_dotfiles:
-		shutil.copy(dotfile, home_dir)
 
 	for dotfile in os_specific_dotfiles:
 		shutil.copy(dotfile, home_dir)		
