@@ -22,8 +22,9 @@ if __name__ == '__main__':
 	target_os = sys.argv[1]
 	home_dir = sys.argv[2]
 
-	os_agnostic_dotfiles = get_dotfiles(os.path.join(__file__, '.'))
-	os_specific_dotfiles = get_dotfiles(os.path.join(__file__, target_os))
+	script_location = os.path.dirname(os.path.realpath(__file__))
+	os_agnostic_dotfiles = get_dotfiles(os.path.join(script_location, '.'))
+	os_specific_dotfiles = get_dotfiles(os.path.join(script_location, target_os))
 
 	for dotfile in os_agnostic_dotfiles:
 		shutil.copy(dotfile, home_dir)
