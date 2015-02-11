@@ -182,4 +182,7 @@ export PATH=$PATH:/usr/local/go/bin
 export JAVA_HOME=/usr/local/jdk1.7.0_45
 export PATH=$PATH:$JAVA_HOME/bin
 
+# use the chef dev kit's ruby on ubuntu 14
+export PATH="/opt/chefdk/embedded/bin:${HOME}/.chefdk/gem/ruby/2.1.0/bin:$PATH"
+
 cd ~
