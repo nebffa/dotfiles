@@ -15,11 +15,11 @@ def get_dotfiles(dirname):
 
 
 if __name__ == '__main__':
-	if len(sys.argv) != 3:
-		raise RuntimeError('USAGE: python install.py TARGET_OS_NAME HOME_DIR')
+	if len(sys.argv) != 2:
+		raise RuntimeError('USAGE: python install.py')
 
 	target_os = sys.argv[1]
-	home_dir = sys.argv[2]
+	home_dir = os.path.expanduser('~')
 
 	script_location = os.path.dirname(os.path.realpath(__file__))
 	os_agnostic_dotfiles = get_dotfiles(script_location)
